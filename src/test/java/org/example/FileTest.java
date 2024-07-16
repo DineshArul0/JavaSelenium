@@ -6,6 +6,7 @@ public class FileTest {
 
     FileUtility fileUtility=new FileUtility();
     ExcelUtility excelUtility=new ExcelUtility();
+    PropertyUtility propertyUtility=new PropertyUtility();
 
     //@Test
     public void testReadFile(){
@@ -24,8 +25,17 @@ public class FileTest {
         excelUtility.getTestData();
     }
 
-    @Test
+   // @Test
     public void writetoExcel(){
-        excelUtility.writeData(1,"","");
+        excelUtility.writeData(12,"Ship Mode","Advanced Mode");
+        excelUtility.writeData(14,"Customer Segment", "Private");
+
+    }
+    @Test
+    public void testPropertyUtils(){
+        String testtype=propertyUtility.getProperty("TestType");
+        String env=propertyUtility.getProperty("Environment");
+        System.out.println("testtype   ====="+testtype);
+        System.out.println("env   ====="+env);
     }
 }
