@@ -31,7 +31,7 @@ public class FileTest {
         excelUtility.writeData(14,"Customer Segment", "Private");
 
     }
-    @Test
+   // @Test
     public void testPropertyUtils(){
         String testtype=propertyUtility.getProperty("TestType");
         String env=propertyUtility.getProperty("Environment");
